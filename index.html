@@ -1,0 +1,27 @@
+<script src="D:\Course\Cloud computing\HW2\WP1\JS\jquery.js"></script>
+<script src="D:\Course\Cloud computing\HW2\WP1\JS\jquery-form.js"></script>
+<body>
+<form id="form1" method="get"> 
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
+  </div>
+  <div>
+    <label for="tel">Phone number:</label>
+    <input type="tel" id="telNo" name="Phone">
+  </div>
+<div class="button">
+  <button type="submit">Submit</button>
+
+<script>
+
+$(function () {
+    $("#form1").ajaxForm(function (data) {
+            console.log(data);
+            console.log("str:" + JSON.stringify(data));
+        }
+    );
+});
+
+</script>
+</div>
